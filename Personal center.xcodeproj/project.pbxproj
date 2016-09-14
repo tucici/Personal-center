@@ -13,7 +13,12 @@
 		2B5161F81D88F199004D964A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5161F61D88F199004D964A /* LaunchScreen.storyboard */; };
 		2B5162031D88F199004D964A /* Personal_centerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5162021D88F199004D964A /* Personal_centerTests.m */; };
 		2B51620E1D88F199004D964A /* Personal_centerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B51620D1D88F199004D964A /* Personal_centerUITests.m */; };
-		2B51621D1D88F219004D964A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B51621C1D88F219004D964A /* ViewController.m */; };
+		2B6F85871D89406C009A8142 /* FocusOnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F85821D89406C009A8142 /* FocusOnViewController.m */; };
+		2B6F85881D89406C009A8142 /* PopularityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F85841D89406C009A8142 /* PopularityViewController.m */; };
+		2B6F85891D89406C009A8142 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F85861D89406C009A8142 /* ViewController.m */; };
+		2B6F85921D89423A009A8142 /* SWCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F858D1D89423A009A8142 /* SWCollectionView.m */; };
+		2B6F85931D89423A009A8142 /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F858F1D89423A009A8142 /* SWCollectionViewCell.m */; };
+		2B6F85941D89423A009A8142 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F85911D89423A009A8142 /* SWTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +52,18 @@
 		2B5162091D88F199004D964A /* Personal centerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Personal centerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B51620D1D88F199004D964A /* Personal_centerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Personal_centerUITests.m; sourceTree = "<group>"; };
 		2B51620F1D88F199004D964A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B51621B1D88F219004D964A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2B51621C1D88F219004D964A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2B6F85811D89406C009A8142 /* FocusOnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusOnViewController.h; sourceTree = "<group>"; };
+		2B6F85821D89406C009A8142 /* FocusOnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusOnViewController.m; sourceTree = "<group>"; };
+		2B6F85831D89406C009A8142 /* PopularityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularityViewController.h; sourceTree = "<group>"; };
+		2B6F85841D89406C009A8142 /* PopularityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularityViewController.m; sourceTree = "<group>"; };
+		2B6F85851D89406C009A8142 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2B6F85861D89406C009A8142 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2B6F858C1D89423A009A8142 /* SWCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionView.h; sourceTree = "<group>"; };
+		2B6F858D1D89423A009A8142 /* SWCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionView.m; sourceTree = "<group>"; };
+		2B6F858E1D89423A009A8142 /* SWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewCell.h; sourceTree = "<group>"; };
+		2B6F858F1D89423A009A8142 /* SWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewCell.m; sourceTree = "<group>"; };
+		2B6F85901D89423A009A8142 /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		2B6F85911D89423A009A8142 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +114,11 @@
 		2B5161E41D88F199004D964A /* Personal center */ = {
 			isa = PBXGroup;
 			children = (
+				2B6F858A1D894097009A8142 /* Model */,
+				2B6F858B1D894097009A8142 /* View */,
+				2B6F85801D89406C009A8142 /* ViewController */,
 				2B5161E81D88F199004D964A /* AppDelegate.h */,
 				2B5161E91D88F199004D964A /* AppDelegate.m */,
-				2B51621B1D88F219004D964A /* ViewController.h */,
-				2B51621C1D88F219004D964A /* ViewController.m */,
 				2B5161F41D88F199004D964A /* Assets.xcassets */,
 				2B5161F61D88F199004D964A /* LaunchScreen.storyboard */,
 				2B5161F91D88F199004D964A /* Info.plist */,
@@ -135,6 +151,39 @@
 				2B51620F1D88F199004D964A /* Info.plist */,
 			);
 			path = "Personal centerUITests";
+			sourceTree = "<group>";
+		};
+		2B6F85801D89406C009A8142 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B6F85811D89406C009A8142 /* FocusOnViewController.h */,
+				2B6F85821D89406C009A8142 /* FocusOnViewController.m */,
+				2B6F85831D89406C009A8142 /* PopularityViewController.h */,
+				2B6F85841D89406C009A8142 /* PopularityViewController.m */,
+				2B6F85851D89406C009A8142 /* ViewController.h */,
+				2B6F85861D89406C009A8142 /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2B6F858A1D894097009A8142 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6F858B1D894097009A8142 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B6F858C1D89423A009A8142 /* SWCollectionView.h */,
+				2B6F858D1D89423A009A8142 /* SWCollectionView.m */,
+				2B6F858E1D89423A009A8142 /* SWCollectionViewCell.h */,
+				2B6F858F1D89423A009A8142 /* SWCollectionViewCell.m */,
+				2B6F85901D89423A009A8142 /* SWTableViewCell.h */,
+				2B6F85911D89423A009A8142 /* SWTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +315,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B51621D1D88F219004D964A /* ViewController.m in Sources */,
+				2B6F85921D89423A009A8142 /* SWCollectionView.m in Sources */,
+				2B6F85941D89423A009A8142 /* SWTableViewCell.m in Sources */,
 				2B5161EA1D88F199004D964A /* AppDelegate.m in Sources */,
+				2B6F85881D89406C009A8142 /* PopularityViewController.m in Sources */,
 				2B5161E71D88F199004D964A /* main.m in Sources */,
+				2B6F85871D89406C009A8142 /* FocusOnViewController.m in Sources */,
+				2B6F85891D89406C009A8142 /* ViewController.m in Sources */,
+				2B6F85931D89423A009A8142 /* SWCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +538,7 @@
 				2B5162141D88F199004D964A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B5162151D88F199004D964A /* Build configuration list for PBXNativeTarget "Personal centerTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +547,7 @@
 				2B5162171D88F199004D964A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B5162181D88F199004D964A /* Build configuration list for PBXNativeTarget "Personal centerUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +556,7 @@
 				2B51621A1D88F199004D964A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
