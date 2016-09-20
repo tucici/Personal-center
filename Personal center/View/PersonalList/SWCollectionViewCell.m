@@ -5,9 +5,9 @@
 //  Created by ssiwo02 on 15/8/31.
 //
 //
-
+#import "Header.h"
 #import "SWCollectionViewCell.h"
-#import "SWGlassesImages.h"
+//#import "SWGlassesImages.h"
 @interface SWCollectionViewCell ()
 
 @property (strong, nonatomic) UIImageView *imageView;
@@ -22,9 +22,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        
-        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 5.0, frame.size.width, frame.size.height - 5)];
-        
+        self.backgroundColor = collectionCellItemColor;
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10.0, 0.0, frame.size.width - 20.0, frame.size.height)];
     }
     return self;
 }
@@ -34,17 +33,20 @@
     self.cellFrame = frame;
     self.imageView.image = [UIImage imageNamed:image];
     self.imageView.backgroundColor = [UIColor lightGrayColor];
-    
-    NSString *color = [[[SWGlassesImages GetInformationForGlasses] valueForKey:image] valueForKey:@"color"];
-    NSString *price = [[[SWGlassesImages GetInformationForGlasses] valueForKey:image] valueForKey:@"price"];
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0.0, frame.size.height / 2, (frame.size.width - 20) / 2 , frame.size.height / 2)];
-    label.text = [NSString stringWithFormat:@"颜色: %@\n价格: %@", color, price];
-    label.font = [UIFont fontWithName:@"Arial" size:13];
-    [label setNumberOfLines:0];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.center = CGPointMake(self.imageView.center.x, label.center.y);
     [self addSubview:self.imageView];
-    [self addSubview:label];
+    
+    
+    /*>>>>>>>>>>>>>>>>>>>>>>>添加Label<<<<<<<<<<<<<<<<<<<<<<<*/
+    /* UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0.0, frame.size.height / 2, (frame.size.width - 20) / 2 , frame.size.height / 2)];
+     label.text = [NSString stringWithFormat:@"颜色: %@\n价格: %@", color, price];
+     label.font = [UIFont fontWithName:@"Arial" size:13];
+     [label setNumberOfLines:0];
+     label.textAlignment = NSTextAlignmentCenter;
+     label.center = CGPointMake(self.imageView.center.x, label.center.y);
+     [self addSubview:label];
+     */
+    
+    
 }
 
 

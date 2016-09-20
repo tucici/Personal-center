@@ -21,6 +21,6 @@
 
 @property (weak, nonatomic) id<SWCollectionViewDelegate> delegate;
 
-- (void) setImageArray:(NSArray*)collectionImageArray;
-
+- (void) setCollectionImageArray:(NSArray *)collectionImageArray;
+- (void) setCollectionImage:(NSString *)collectionImageName;
 @end

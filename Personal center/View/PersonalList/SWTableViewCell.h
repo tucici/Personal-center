@@ -19,8 +19,8 @@
 @interface SWTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) id<SWTableViewCellDelegate> delegate;
-- (void) setImageArray:(NSArray *)ImageArray;
-
+- (void) setSWTableViewCellImageArray:(NSArray *)tableViewCellImageArray;
+- (void) setSWTableViewCellImage:(NSString *)tablieViewCellImageName;
 
 
 @end
