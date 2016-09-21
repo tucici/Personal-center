@@ -14,6 +14,7 @@
 #define statusbarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 #define buttonHeight 40.0
 #define buttonWidth 64.0
+#define cellHeight (view_height - statusbarHeight - buttonHeight * 2 - 105) / 9.0
 /*==================================*Color*================================*/
 #define collectionCellItemColor [UIColor colorWithRed:54.0 / 255 green:54.0 / 255  blue:54.0/255 alpha:1]
 #define backViewColor [UIColor colorWithRed:242.0 / 255 green:242.0 / 255  blue:242.0/255 alpha:1]
