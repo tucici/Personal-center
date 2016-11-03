@@ -23,15 +23,15 @@
 		2BC102681DCB280100EE2D5D /* PopularityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102391DCB280100EE2D5D /* PopularityViewController.m */; };
 		2BC102691DCB280100EE2D5D /* SecurityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1023D1DCB280100EE2D5D /* SecurityViewController.m */; };
 		2BC1026A1DCB280100EE2D5D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102411DCB280100EE2D5D /* SettingViewController.m */; };
-		2BC1026B1DCB280100EE2D5D /* HeadPortraitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102481DCB280100EE2D5D /* HeadPortraitView.m */; };
-		2BC1026C1DCB280100EE2D5D /* PersonalDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1024A1DCB280100EE2D5D /* PersonalDetails.m */; };
-		2BC1026D1DCB280100EE2D5D /* SWCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1024D1DCB280100EE2D5D /* SWCollectionView.m */; };
-		2BC1026E1DCB280100EE2D5D /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1024F1DCB280100EE2D5D /* SWCollectionViewCell.m */; };
-		2BC102701DCB280100EE2D5D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102541DCB280100EE2D5D /* ViewController.m */; };
 		2BC102711DCB280100EE2D5D /* CustomBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102591DCB280100EE2D5D /* CustomBtn.m */; };
 		2BC102721DCB280100EE2D5D /* SWGlassesImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1025B1DCB280100EE2D5D /* SWGlassesImages.m */; };
 		2BC1027B1DCB287F00EE2D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC102791DCB287F00EE2D5D /* Assets.xcassets */; };
 		2BC1027E1DCB28B300EE2D5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1027D1DCB28B300EE2D5D /* main.m */; };
+		2BC102911DCB4EBB00EE2D5D /* HeadPortraitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102831DCB4EBB00EE2D5D /* HeadPortraitView.m */; };
+		2BC102921DCB4EBB00EE2D5D /* PersonalDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102851DCB4EBB00EE2D5D /* PersonalDetails.m */; };
+		2BC102931DCB4EBB00EE2D5D /* SWCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102881DCB4EBB00EE2D5D /* SWCollectionView.m */; };
+		2BC102941DCB4EBB00EE2D5D /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1028A1DCB4EBB00EE2D5D /* SWCollectionViewCell.m */; };
+		2BC102961DCB4EBB00EE2D5D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1028F1DCB4EBB00EE2D5D /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,16 +88,6 @@
 		2BC102401DCB280100EE2D5D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		2BC102411DCB280100EE2D5D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		2BC102431DCB280100EE2D5D /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		2BC102471DCB280100EE2D5D /* HeadPortraitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadPortraitView.h; sourceTree = "<group>"; };
-		2BC102481DCB280100EE2D5D /* HeadPortraitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadPortraitView.m; sourceTree = "<group>"; };
-		2BC102491DCB280100EE2D5D /* PersonalDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetails.h; sourceTree = "<group>"; };
-		2BC1024A1DCB280100EE2D5D /* PersonalDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDetails.m; sourceTree = "<group>"; };
-		2BC1024C1DCB280100EE2D5D /* SWCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionView.h; sourceTree = "<group>"; };
-		2BC1024D1DCB280100EE2D5D /* SWCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionView.m; sourceTree = "<group>"; };
-		2BC1024E1DCB280100EE2D5D /* SWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewCell.h; sourceTree = "<group>"; };
-		2BC1024F1DCB280100EE2D5D /* SWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewCell.m; sourceTree = "<group>"; };
-		2BC102531DCB280100EE2D5D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2BC102541DCB280100EE2D5D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2BC102581DCB280100EE2D5D /* CustomBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBtn.h; sourceTree = "<group>"; };
 		2BC102591DCB280100EE2D5D /* CustomBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBtn.m; sourceTree = "<group>"; };
 		2BC1025A1DCB280100EE2D5D /* SWGlassesImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWGlassesImages.h; sourceTree = "<group>"; };
@@ -105,6 +95,16 @@
 		2BC102791DCB287F00EE2D5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BC1027A1DCB287F00EE2D5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC1027D1DCB28B300EE2D5D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BC102821DCB4EBB00EE2D5D /* HeadPortraitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadPortraitView.h; sourceTree = "<group>"; };
+		2BC102831DCB4EBB00EE2D5D /* HeadPortraitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadPortraitView.m; sourceTree = "<group>"; };
+		2BC102841DCB4EBB00EE2D5D /* PersonalDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetails.h; sourceTree = "<group>"; };
+		2BC102851DCB4EBB00EE2D5D /* PersonalDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDetails.m; sourceTree = "<group>"; };
+		2BC102871DCB4EBB00EE2D5D /* SWCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionView.h; sourceTree = "<group>"; };
+		2BC102881DCB4EBB00EE2D5D /* SWCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionView.m; sourceTree = "<group>"; };
+		2BC102891DCB4EBB00EE2D5D /* SWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewCell.h; sourceTree = "<group>"; };
+		2BC1028A1DCB4EBB00EE2D5D /* SWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewCell.m; sourceTree = "<group>"; };
+		2BC1028E1DCB4EBB00EE2D5D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2BC1028F1DCB4EBB00EE2D5D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +189,6 @@
 				2BC102141DCB280100EE2D5D /* Categories */,
 				2BC1021B1DCB280100EE2D5D /* Classes */,
 				2BC102421DCB280100EE2D5D /* Macro */,
-				2BC102441DCB280100EE2D5D /* Main */,
 				2BC102561DCB280100EE2D5D /* Sources */,
 				2BC102571DCB280100EE2D5D /* Tools */,
 			);
@@ -221,6 +220,7 @@
 		2BC1021B1DCB280100EE2D5D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2BC1027F1DCB4EBB00EE2D5D /* Personal */,
 				2BC1021C1DCB280100EE2D5D /* Agreement */,
 				2BC102201DCB280100EE2D5D /* Company */,
 				2BC102241DCB280100EE2D5D /* Edit */,
@@ -397,63 +397,6 @@
 			path = Macro;
 			sourceTree = "<group>";
 		};
-		2BC102441DCB280100EE2D5D /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				2BC102451DCB280100EE2D5D /* Model */,
-				2BC102461DCB280100EE2D5D /* View */,
-				2BC102521DCB280100EE2D5D /* ViewController */,
-				2BC102551DCB280100EE2D5D /* ViewModel */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		2BC102451DCB280100EE2D5D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2BC102461DCB280100EE2D5D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2BC102471DCB280100EE2D5D /* HeadPortraitView.h */,
-				2BC102481DCB280100EE2D5D /* HeadPortraitView.m */,
-				2BC102491DCB280100EE2D5D /* PersonalDetails.h */,
-				2BC1024A1DCB280100EE2D5D /* PersonalDetails.m */,
-				2BC1024B1DCB280100EE2D5D /* PersonalList */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2BC1024B1DCB280100EE2D5D /* PersonalList */ = {
-			isa = PBXGroup;
-			children = (
-				2BC1024C1DCB280100EE2D5D /* SWCollectionView.h */,
-				2BC1024D1DCB280100EE2D5D /* SWCollectionView.m */,
-				2BC1024E1DCB280100EE2D5D /* SWCollectionViewCell.h */,
-				2BC1024F1DCB280100EE2D5D /* SWCollectionViewCell.m */,
-			);
-			path = PersonalList;
-			sourceTree = "<group>";
-		};
-		2BC102521DCB280100EE2D5D /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2BC102531DCB280100EE2D5D /* ViewController.h */,
-				2BC102541DCB280100EE2D5D /* ViewController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		2BC102551DCB280100EE2D5D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		2BC102561DCB280100EE2D5D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +413,63 @@
 				2BC1025B1DCB280100EE2D5D /* SWGlassesImages.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		2BC1027F1DCB4EBB00EE2D5D /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				2BC102801DCB4EBB00EE2D5D /* Model */,
+				2BC102811DCB4EBB00EE2D5D /* View */,
+				2BC1028D1DCB4EBB00EE2D5D /* ViewController */,
+				2BC102901DCB4EBB00EE2D5D /* ViewModel */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		2BC102801DCB4EBB00EE2D5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BC102811DCB4EBB00EE2D5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BC102821DCB4EBB00EE2D5D /* HeadPortraitView.h */,
+				2BC102831DCB4EBB00EE2D5D /* HeadPortraitView.m */,
+				2BC102841DCB4EBB00EE2D5D /* PersonalDetails.h */,
+				2BC102851DCB4EBB00EE2D5D /* PersonalDetails.m */,
+				2BC102861DCB4EBB00EE2D5D /* PersonalList */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BC102861DCB4EBB00EE2D5D /* PersonalList */ = {
+			isa = PBXGroup;
+			children = (
+				2BC102871DCB4EBB00EE2D5D /* SWCollectionView.h */,
+				2BC102881DCB4EBB00EE2D5D /* SWCollectionView.m */,
+				2BC102891DCB4EBB00EE2D5D /* SWCollectionViewCell.h */,
+				2BC1028A1DCB4EBB00EE2D5D /* SWCollectionViewCell.m */,
+			);
+			path = PersonalList;
+			sourceTree = "<group>";
+		};
+		2BC1028D1DCB4EBB00EE2D5D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BC1028E1DCB4EBB00EE2D5D /* ViewController.h */,
+				2BC1028F1DCB4EBB00EE2D5D /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2BC102901DCB4EBB00EE2D5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,25 +603,25 @@
 				2BC102621DCB280100EE2D5D /* CompanyViewController.m in Sources */,
 				2BC1025E1DCB280100EE2D5D /* UIButton+circleBackImage.m in Sources */,
 				2BC102721DCB280100EE2D5D /* SWGlassesImages.m in Sources */,
+				2BC102911DCB4EBB00EE2D5D /* HeadPortraitView.m in Sources */,
+				2BC102921DCB4EBB00EE2D5D /* PersonalDetails.m in Sources */,
 				2BC102651DCB280100EE2D5D /* FocusOnViewController.m in Sources */,
 				2BC1026A1DCB280100EE2D5D /* SettingViewController.m in Sources */,
 				2BC1025F1DCB280100EE2D5D /* UIImage+Scale.m in Sources */,
 				2BC102631DCB280100EE2D5D /* EditViewController.m in Sources */,
-				2BC1026C1DCB280100EE2D5D /* PersonalDetails.m in Sources */,
-				2BC1026B1DCB280100EE2D5D /* HeadPortraitView.m in Sources */,
-				2BC1026E1DCB280100EE2D5D /* SWCollectionViewCell.m in Sources */,
 				2BC102711DCB280100EE2D5D /* CustomBtn.m in Sources */,
 				2BC102681DCB280100EE2D5D /* PopularityViewController.m in Sources */,
 				2BC102661DCB280100EE2D5D /* HelpViewController.m in Sources */,
 				2BC1025C1DCB280100EE2D5D /* AppDelegate.m in Sources */,
 				2BC102601DCB280100EE2D5D /* UITableViewCell+Category.m in Sources */,
-				2BC102701DCB280100EE2D5D /* ViewController.m in Sources */,
+				2BC102931DCB4EBB00EE2D5D /* SWCollectionView.m in Sources */,
 				2BC102641DCB280100EE2D5D /* FansViewController.m in Sources */,
 				2BC102671DCB280100EE2D5D /* OpinionView.m in Sources */,
 				2BC102611DCB280100EE2D5D /* AgreementViewController.m in Sources */,
-				2BC1026D1DCB280100EE2D5D /* SWCollectionView.m in Sources */,
 				2BC1027E1DCB28B300EE2D5D /* main.m in Sources */,
+				2BC102961DCB4EBB00EE2D5D /* ViewController.m in Sources */,
 				2BC102691DCB280100EE2D5D /* SecurityViewController.m in Sources */,
+				2BC102941DCB4EBB00EE2D5D /* SWCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
