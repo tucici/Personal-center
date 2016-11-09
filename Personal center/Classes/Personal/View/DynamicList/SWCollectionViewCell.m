@@ -9,10 +9,10 @@
 #import "SWCollectionViewCell.h"
 #import "UIImage+Scale.h"
 #import "CustomBtn.h"
+#import "CellModel.h"
 @interface SWCollectionViewCell ()
 @property (nonatomic, strong) CustomBtn *delete;                 /*删除按钮*/
 @property (strong, nonatomic) UIImageView *imageView;
-//@property (assign, nonatomic) CGRect cellFrame;
 
 @end
 
@@ -24,7 +24,7 @@
     if (self) {
         // Initialization code
         self.backgroundColor = collectionCellItemColor;
-    
+        
         [self initializeImageView];
         
         [self initializeDeleteBtn];
@@ -36,7 +36,7 @@
 - (void)initializeImageView{
     
     self.imageView = [[UIImageView alloc] init];
-    [self addSubview:self.imageView];
+    [self.contentView addSubview:self.imageView];
 }
 
 - (void)initializeDeleteBtn{
@@ -48,16 +48,18 @@
     [_delete setBackgroundImage:[UIImage imageNamed:@"06"] forState:UIControlStateSelected];
     [_delete addTarget:self action:@selector(delete:) forControlEvents:UIControlEventTouchUpInside];
     _delete.hidden = YES;
-    [self addSubview:_delete];
+    [self.contentView addSubview:_delete];
 }
 
--(void)setImageName:(NSString *)image
+- (void)setImageName:(NSMutableDictionary *)dict
 {
-    UIImage *img = [UIImage imageNamed:image];
+    UIImage *img = [UIImage imageNamed:[dict objectForKey:@"image"]];
     self.imageView.image = img;
     self.imageView.frame = [img sizefromImage:img scaledToRect:self.frame];
     self.imageView.backgroundColor = [UIColor lightGrayColor];
-    
+    BOOL selected = [[dict objectForKey:@"selected"] isEqualToString:@"NO"]?NO:YES;
+    _delete.selected = selected;
+    //    _delete.hidden = !hidden;
     
     
     /*>>>>>>>>>>>>>>>>>>>>>>>添加Label<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -67,12 +69,18 @@
      [label setNumberOfLines:0];
      label.textAlignment = NSTextAlignmentCenter;
      label.center = CGPointMake(self.imageView.center.x, label.center.y);
-     [self addSubview:label];
+     [self.contentView addSubview:label];
      */
     
     
 }
-
+- (void)configureData:(CellModel *)model {
+    UIImage *img = [UIImage imageNamed:model.imageName];
+    self.imageView.image = img;
+    self.imageView.frame = [img sizefromImage:img scaledToRect:self.frame];
+    self.imageView.backgroundColor = [UIColor lightGrayColor];
+    _delete.selected = model.isPicked;
+}
 - (void)addgesture{
     
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
@@ -87,29 +95,23 @@
         [UIView animateWithDuration:0.5 animations:^{
             self.imageView.transform = CGAffineTransformMakeScale(1.1, 1.1);
         } completion:^(BOOL finished) {
-            [self.delegate longprogressCollectionViewCell];
-        }];
-    }else if (sender.state == UIGestureRecognizerStateEnded) {
-        
-        [UIView animateWithDuration:0.5 animations:^{
-            /**/
             self.imageView.transform = CGAffineTransformIdentity;
-        }];
+            [self.delegate longprogressCell];
         
-        _delete.hidden = !_delete.hidden?YES:NO;
+        }];
     }
     
 }
-- (void)showDeleBtnAtCollectionCell{
-    _delete.hidden = NO;
+
+- (void)showSelBtnAtCollectionCell:(NSInteger)state{
+   _delete.hidden = (state == 1 || state == 2)?NO:YES;
     
 }
+
 - (void)delete:(CustomBtn *)sender{
-    sender.selected = !sender.selected;
-    NSLog(@"click delete");
-    
-    
+
 }
+
 
 
 

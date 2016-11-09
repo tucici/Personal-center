@@ -7,21 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef enum {
-    clickType,
-    longProgress
-}gestureType;
+
+@class CellModel;
+
 @protocol SWCollectionViewCellDelegate<NSObject>
 @optional
 /**
  *长按单元cell
  */
-- (void)longprogressCollectionViewCell;
+- (void)longprogressCell;
 @end
 @interface SWCollectionViewCell : UICollectionViewCell
 @property (nonatomic, weak) id <SWCollectionViewCellDelegate>delegate;
 
+- (void)setImageName:(NSMutableDictionary *)dict;
 
-- (void)setImageName:(NSString *) image;
-- (void)showDeleBtnAtCollectionCell;
+
+/**
+ *显示所有视频未勾选状态
+ */
+- (void)showSelBtnAtCollectionCell:(NSInteger) state;
+
+
+- (void)configureData:(CellModel *)model;
 @end

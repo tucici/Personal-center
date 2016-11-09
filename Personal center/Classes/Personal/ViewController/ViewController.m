@@ -7,20 +7,24 @@
 //
 #import "Header.h"
 #import "ViewController.h"
-//#import "SWTableViewCell.h"
+//#import "DynamicViewModel.h"
 #import "SWCollectionView.h"
 #import "PersonalDetails.h"
 #import "FocusOnViewController.h"
 #import "PopularityViewController.h"
 #import "FansViewController.h"
 #import "SettingViewController.h"
+#import "NSMutableArray+avoidDuplication.h"
+#import "DynamicViewModel.h"
+#import "CellModel.h"
 @interface ViewController ()<PersonalDetailsDelegate,SWCollectionViewDelegate>
 {
-    SWCollectionView *_dynamicView;         /*个人中心第一个页面的瀑布流*/
+    //    DynamicViewModel *_dynamicViewModel;     /*个人中心动态ViewModel*/
+    SWCollectionView *_dynamicView;         /*个人中心动态*/
     PersonalDetails *_personalDetails;         /*个人中心第一个页面的个人详细资料*/
     UIView *_toolbar;                       /**/
-    NSMutableArray *_coverPhotos_public;    /*公开封面数组*/
-    NSMutableArray *_coverPhotos_private;   /*私密封面数组*/
+    NSMutableArray *_selectArray;
+    DynamicViewModel *_sourceModel;
 }
 @end
 
@@ -33,11 +37,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = backViewColor;
-
+    _selectArray = [NSMutableArray array];
     self.automaticallyAdjustsScrollViewInsets = NO;/*去掉tableView滚动时候最顶部的空白处*/
     
-    /*initializeCoverphotos*/
-    [self initializeCoverphotos];
+    [self initializeSourceModel];
     
     /*initializePerDetails*/
     [self initializePersonalDetails];
@@ -50,8 +53,11 @@
     // Do any additional setup after loading the view.
 }
 
-/*======================================================initializePerDetails====================================*/
--(void)initializePersonalDetails{
+- (void)initializeSourceModel{
+    _sourceModel = [[DynamicViewModel alloc] init];
+}
+
+- (void)initializePersonalDetails{
     _personalDetails = [[PersonalDetails alloc]initWithFrame:CGRectMake(0.0, 0.0, view_width, 220)];
     _personalDetails.delegate = self;
     _personalDetails.EventType = PersonalEventPublic;
@@ -59,27 +65,18 @@
     
 }
 
-/*======================================================initializeTableView====================================*/
 -(void)initializeCollectionView{
     _dynamicView = [[SWCollectionView alloc]initWithFrame:CGRectMake(0.0, CGRectGetMaxY(_personalDetails.frame), view_width, view_height - CGRectGetMaxY(_personalDetails.frame))];
     _dynamicView.delegate = self;
-    [_dynamicView.coverPhotos setObject:_coverPhotos_public forKey:@"public"];
-    [_dynamicView.coverPhotos setObject:_coverPhotos_private forKey:@"private"];
+    _dynamicView.dataModel = _sourceModel;
     [self.view addSubview:_dynamicView];
     
-    //    [ self addgesture];
 }
 
-/*======================================================initializeCoverphotos====================================*/
--(void)initializeCoverphotos{
-    _coverPhotos_public = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"5",@"3",@"1",@"2",@"3",@"4",@"5",@"6",@"5",@"3",@"6",@"5",@"3",@"1",@"2",@"3",@"4",@"5",@"6",@"5",@"3",@"6",@"5",@"3",@"1",@"2",@"3",@"4",@"5",@"6",@"5",@"3",nil];
-    _coverPhotos_private= [NSMutableArray arrayWithObjects:@"01",@"02",@"03",@"04",@"05",@"06",@"06",@"01",@"02",@"03",@"04",@"05",@"06",@"06",@"03",@"04",@"05",@"06",@"06",@"01",@"02",@"03",@"04",@"05",@"06",@"06",@"03",@"04",@"05",@"06",@"06",@"01",@"02",@"03",@"04",@"05",@"06",@"06", nil];
-    
-    
-}
+
 
 - (void)initializeToolBar{
-    //    CGFloat spacing = (view_width - buttonHeight * 3)
+    
     _toolbar  = [[UIView alloc]initWithFrame:CGRectMake(0.0, view_height + 10.0, view_width, buttonHeight + 10.0)];
     _toolbar.backgroundColor = [UIColor blackColor];
     _toolbar.alpha = 0.8;
@@ -102,10 +99,6 @@
     [self.view addSubview:_toolbar];
 }
 
-- (void)longPress:(UILongPressGestureRecognizer *)sender{
-    
-    
-}
 
 - (void)changeVideoRights{
     [self addAlertWithType:0];
@@ -132,7 +125,21 @@
     }];
     [cancelAction setValue:mainColor forKey:@"titleTextColor"];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"点击确认");
+        [self hiddenToolView];
+        for (CellModel *model in _selectArray) {
+            
+            if (_dynamicView.type == publicCoverPhoto) {
+                
+                [_sourceModel.publicData removeObject:model];
+            }else if (_dynamicView.type == privateCoverPhoto){
+                
+                [_sourceModel.privateData removeObject:model];
+            }
+            
+        }
+        _dynamicView.state = NormalState;
+        [_selectArray removeAllObjects];
+        
     }];
     [confirmAction setValue:mainColor forKey:@"titleTextColor"];
     [alert addAction:cancelAction];
@@ -212,13 +219,13 @@
         NSLog(@"响应个人中心人气事件");
         return;
     }else if (type == 6){
+        [self hiddenToolView];
         _dynamicView.type = privateCoverPhoto;
-        [_dynamicView reloadAddCoverPhotos];
         NSLog(@"响应个人中心私密信息事件");
         return;
     }else if (type == 7){
+        [self hiddenToolView];
         _dynamicView.type = publicCoverPhoto;
-        [_dynamicView reloadAddCoverPhotos];
         NSLog(@"响应个人中心公开信息事件");
         return;
     }else if (type == 8){
@@ -228,58 +235,43 @@
     
 }
 
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    NSInteger number = ([[_dynamicView.coverPhotos objectForKey:@"public"]count] % 3 == 0)?([[_dynamicView.coverPhotos objectForKey:@"public"] count]/3):([[_dynamicView.coverPhotos objectForKey:@"public"]count]/3 + 1);
-    return (number)?number:1;
-}
-//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//
-//    //定义一个静态变量，用于标识cell
-//    static NSString *customCellIdentifier = @"SWTableViewCell";
-//    //首先根据标识  去缓存池取
-//    SWTableViewCell *cell = [_tableview dequeueReusableCellWithIdentifier:customCellIdentifier];
-//    //如果缓存池没有，则重新创建并放入缓存池中
-//    if (!cell) {
-//        cell  = [[SWTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:customCellIdentifier];
-//    }
-//
-//    /*NSString *img = (_personalDetails.EventType == PersonalEventPublic)?([[_coverPhotos objectForKey:@"public"] objectAtIndex:indexPath.section]):([[_coverPhotos objectForKey:@"private"] objectAtIndex:indexPath.section]);
-//     [cell setSWTableViewCellImage:img];*/ /*传入单个图片*/
-//
-//    NSMutableArray *imgArray = (_personalDetails.EventType == PersonalEventPublic)?([_coverPhotos objectForKey:@"public"]):([_coverPhotos objectForKey:@"private"]);
-//    [cell setSWTableViewCellImageArray:[self splitArray:imgArray With:3][indexPath.section]];/*传入数组*/
-//    [cell setDelegate:self];
-//    [cell setTag: [indexPath section]];
-//    return cell;
-//}
-//#pragma mark UITableViewDelegate
-//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    return 0.0;
-//}
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return view_width / 3;
-//}
-//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-//    return 0.0;
-//}
 #pragma mark SWCollectionViewDelegate
--(void)didSelectImageItemAtIndexPath:(NSInteger)section{
-    NSLog(@" section  :%ld  ",(long)section);
-#pragma mark 点击封面列表，跳转页面反应
+
+- (void)didSelectItem:(NSInteger)item with:(CoverPhotoType)type {
+    CellModel *selectModel;
+    if (type == publicCoverPhoto) {
+        selectModel = [_sourceModel.publicData objectAtIndex:item];
+    }else if (type == privateCoverPhoto){
+        selectModel = [_sourceModel.privateData objectAtIndex:item];
+    }
+    
+    selectModel.isPicked = !selectModel.isPicked;
+    _dynamicView.state = SelectState;
+    
+    
+    if (selectModel.isPicked) {
+        [_selectArray addObject:selectModel];
+        
+    }else if (!selectModel.isPicked){
+        [_selectArray removeObject:selectModel];
+    }
+}
+- (void)popToolView{
+    if (_dynamicView.state == NormalState) {
+        [self hiddenToolView];
+        return;
+    }else if (_dynamicView.state == SelectState || _dynamicView.state == SelectedState){
+        [UIView animateWithDuration:0.5 animations:^{
+            _toolbar.transform = CGAffineTransformMakeTranslation(0.0, - buttonHeight - 10.0);
+        }];
+    }
+    
 }
 
-- (void)longprogressCollectionView{
+- (void)hiddenToolView{
     [UIView animateWithDuration:0.5 animations:^{
-        _toolbar.transform = CGAffineTransformMakeTranslation(0.0, - buttonHeight - 10.0);
+        _toolbar.transform = CGAffineTransformIdentity;
     }];
-    //   NSInteger cellCount = ([[_coverPhotos objectForKey:@"public"]count] % 3 == 0)?([[_coverPhotos objectForKey:@"public"] count]/3):([[_coverPhotos objectForKey:@"public"]count]/3 + 1);
-    //    for (int i = 0; i < cellCount; i++) {
-    //     SWTableViewCell *cell = [_tableview cellForRowAtIndexPath:[NSIndexPath indexPathWithIndex:(NSUInteger)i]];
-    //        [cell showDeleteBtnAtTableViewCell];
-    //    }
-    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

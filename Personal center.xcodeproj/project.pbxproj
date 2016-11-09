@@ -29,9 +29,13 @@
 		2BC1027E1DCB28B300EE2D5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1027D1DCB28B300EE2D5D /* main.m */; };
 		2BC102911DCB4EBB00EE2D5D /* HeadPortraitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102831DCB4EBB00EE2D5D /* HeadPortraitView.m */; };
 		2BC102921DCB4EBB00EE2D5D /* PersonalDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102851DCB4EBB00EE2D5D /* PersonalDetails.m */; };
-		2BC102931DCB4EBB00EE2D5D /* SWCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102881DCB4EBB00EE2D5D /* SWCollectionView.m */; };
-		2BC102941DCB4EBB00EE2D5D /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1028A1DCB4EBB00EE2D5D /* SWCollectionViewCell.m */; };
-		2BC102961DCB4EBB00EE2D5D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1028F1DCB4EBB00EE2D5D /* ViewController.m */; };
+		2BC102A11DCC351F00EE2D5D /* SWCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1029C1DCC351F00EE2D5D /* SWCollectionView.m */; };
+		2BC102A21DCC351F00EE2D5D /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1029E1DCC351F00EE2D5D /* SWCollectionViewCell.m */; };
+		2BC102A81DCC3F2B00EE2D5D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102A71DCC3F2B00EE2D5D /* ViewController.m */; };
+		2BC102AE1DD1AE6800EE2D5D /* NSMutableArray+avoidDuplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102AD1DD1AE6800EE2D5D /* NSMutableArray+avoidDuplication.m */; };
+		2BC102B11DD1C5AD00EE2D5D /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102B01DD1C5AD00EE2D5D /* CellModel.m */; };
+		2BC102B41DD1E0B100EE2D5D /* DynamicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC102B31DD1E0B100EE2D5D /* DynamicViewModel.m */; };
+		43F7E309C7A52663E30F0855 /* libPods-Personal center.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 326C15D422521EC49BBBE488 /* libPods-Personal center.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D65760F52BBA0CDF4893723 /* Pods-Personal center.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal center.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal center/Pods-Personal center.release.xcconfig"; sourceTree = "<group>"; };
 		2B5161E21D88F199004D964A /* Personal center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5161FE1D88F199004D964A /* Personal centerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Personal centerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5162021D88F199004D964A /* Personal_centerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Personal_centerTests.m; sourceTree = "<group>"; };
@@ -99,12 +104,20 @@
 		2BC102831DCB4EBB00EE2D5D /* HeadPortraitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadPortraitView.m; sourceTree = "<group>"; };
 		2BC102841DCB4EBB00EE2D5D /* PersonalDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetails.h; sourceTree = "<group>"; };
 		2BC102851DCB4EBB00EE2D5D /* PersonalDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDetails.m; sourceTree = "<group>"; };
-		2BC102871DCB4EBB00EE2D5D /* SWCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionView.h; sourceTree = "<group>"; };
-		2BC102881DCB4EBB00EE2D5D /* SWCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionView.m; sourceTree = "<group>"; };
-		2BC102891DCB4EBB00EE2D5D /* SWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewCell.h; sourceTree = "<group>"; };
-		2BC1028A1DCB4EBB00EE2D5D /* SWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewCell.m; sourceTree = "<group>"; };
 		2BC1028E1DCB4EBB00EE2D5D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2BC1028F1DCB4EBB00EE2D5D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BC1029B1DCC351F00EE2D5D /* SWCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionView.h; sourceTree = "<group>"; };
+		2BC1029C1DCC351F00EE2D5D /* SWCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionView.m; sourceTree = "<group>"; };
+		2BC1029D1DCC351F00EE2D5D /* SWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewCell.h; sourceTree = "<group>"; };
+		2BC1029E1DCC351F00EE2D5D /* SWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewCell.m; sourceTree = "<group>"; };
+		2BC102A71DCC3F2B00EE2D5D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BC102AC1DD1AE6800EE2D5D /* NSMutableArray+avoidDuplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+avoidDuplication.h"; sourceTree = "<group>"; };
+		2BC102AD1DD1AE6800EE2D5D /* NSMutableArray+avoidDuplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+avoidDuplication.m"; sourceTree = "<group>"; };
+		2BC102AF1DD1C5AD00EE2D5D /* CellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
+		2BC102B01DD1C5AD00EE2D5D /* CellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
+		2BC102B21DD1E0B100EE2D5D /* DynamicViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicViewModel.h; sourceTree = "<group>"; };
+		2BC102B31DD1E0B100EE2D5D /* DynamicViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicViewModel.m; sourceTree = "<group>"; };
+		326C15D422521EC49BBBE488 /* libPods-Personal center.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Personal center.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB73B258A30FE73A53B18DF /* Pods-Personal center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal center.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal center/Pods-Personal center.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F7E309C7A52663E30F0855 /* libPods-Personal center.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +154,8 @@
 				2B5162011D88F199004D964A /* Personal centerTests */,
 				2B51620C1D88F199004D964A /* Personal centerUITests */,
 				2B5161E31D88F199004D964A /* Products */,
+				FFA48D13595923226F9AADAA /* Pods */,
+				3B97B49F497CEE3C00BB1FAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,6 +229,8 @@
 				2BC102181DCB280100EE2D5D /* UIImage+Scale.m */,
 				2BC102191DCB280100EE2D5D /* UITableViewCell+Category.h */,
 				2BC1021A1DCB280100EE2D5D /* UITableViewCell+Category.m */,
+				2BC102AC1DD1AE6800EE2D5D /* NSMutableArray+avoidDuplication.h */,
+				2BC102AD1DD1AE6800EE2D5D /* NSMutableArray+avoidDuplication.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -429,6 +447,8 @@
 		2BC102801DCB4EBB00EE2D5D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2BC102AF1DD1C5AD00EE2D5D /* CellModel.h */,
+				2BC102B01DD1C5AD00EE2D5D /* CellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,31 +456,20 @@
 		2BC102811DCB4EBB00EE2D5D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BC1029A1DCC351F00EE2D5D /* DynamicList */,
 				2BC102821DCB4EBB00EE2D5D /* HeadPortraitView.h */,
 				2BC102831DCB4EBB00EE2D5D /* HeadPortraitView.m */,
 				2BC102841DCB4EBB00EE2D5D /* PersonalDetails.h */,
 				2BC102851DCB4EBB00EE2D5D /* PersonalDetails.m */,
-				2BC102861DCB4EBB00EE2D5D /* PersonalList */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2BC102861DCB4EBB00EE2D5D /* PersonalList */ = {
-			isa = PBXGroup;
-			children = (
-				2BC102871DCB4EBB00EE2D5D /* SWCollectionView.h */,
-				2BC102881DCB4EBB00EE2D5D /* SWCollectionView.m */,
-				2BC102891DCB4EBB00EE2D5D /* SWCollectionViewCell.h */,
-				2BC1028A1DCB4EBB00EE2D5D /* SWCollectionViewCell.m */,
-			);
-			path = PersonalList;
 			sourceTree = "<group>";
 		};
 		2BC1028D1DCB4EBB00EE2D5D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2BC1028E1DCB4EBB00EE2D5D /* ViewController.h */,
-				2BC1028F1DCB4EBB00EE2D5D /* ViewController.m */,
+				2BC102A71DCC3F2B00EE2D5D /* ViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -468,8 +477,38 @@
 		2BC102901DCB4EBB00EE2D5D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2BC102B21DD1E0B100EE2D5D /* DynamicViewModel.h */,
+				2BC102B31DD1E0B100EE2D5D /* DynamicViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BC1029A1DCC351F00EE2D5D /* DynamicList */ = {
+			isa = PBXGroup;
+			children = (
+				2BC1029B1DCC351F00EE2D5D /* SWCollectionView.h */,
+				2BC1029C1DCC351F00EE2D5D /* SWCollectionView.m */,
+				2BC1029D1DCC351F00EE2D5D /* SWCollectionViewCell.h */,
+				2BC1029E1DCC351F00EE2D5D /* SWCollectionViewCell.m */,
+			);
+			path = DynamicList;
+			sourceTree = "<group>";
+		};
+		3B97B49F497CEE3C00BB1FAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				326C15D422521EC49BBBE488 /* libPods-Personal center.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFA48D13595923226F9AADAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DB73B258A30FE73A53B18DF /* Pods-Personal center.debug.xcconfig */,
+				0D65760F52BBA0CDF4893723 /* Pods-Personal center.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,9 +518,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B5162121D88F199004D964A /* Build configuration list for PBXNativeTarget "Personal center" */;
 			buildPhases = (
+				36E122932ED815F386C194E4 /* [CP] Check Pods Manifest.lock */,
 				2B5161DE1D88F199004D964A /* Sources */,
 				2B5161DF1D88F199004D964A /* Frameworks */,
 				2B5161E01D88F199004D964A /* Resources */,
+				DB2905272811B5B0E684A780 /* [CP] Embed Pods Frameworks */,
+				DD546861275BE437AF092F7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -595,6 +637,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36E122932ED815F386C194E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2905272811B5B0E684A780 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Personal center/Pods-Personal center-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD546861275BE437AF092F7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Personal center/Pods-Personal center-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B5161DE1D88F199004D964A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -608,20 +698,23 @@
 				2BC102651DCB280100EE2D5D /* FocusOnViewController.m in Sources */,
 				2BC1026A1DCB280100EE2D5D /* SettingViewController.m in Sources */,
 				2BC1025F1DCB280100EE2D5D /* UIImage+Scale.m in Sources */,
+				2BC102AE1DD1AE6800EE2D5D /* NSMutableArray+avoidDuplication.m in Sources */,
 				2BC102631DCB280100EE2D5D /* EditViewController.m in Sources */,
 				2BC102711DCB280100EE2D5D /* CustomBtn.m in Sources */,
 				2BC102681DCB280100EE2D5D /* PopularityViewController.m in Sources */,
+				2BC102A21DCC351F00EE2D5D /* SWCollectionViewCell.m in Sources */,
+				2BC102B11DD1C5AD00EE2D5D /* CellModel.m in Sources */,
+				2BC102A11DCC351F00EE2D5D /* SWCollectionView.m in Sources */,
+				2BC102B41DD1E0B100EE2D5D /* DynamicViewModel.m in Sources */,
 				2BC102661DCB280100EE2D5D /* HelpViewController.m in Sources */,
 				2BC1025C1DCB280100EE2D5D /* AppDelegate.m in Sources */,
 				2BC102601DCB280100EE2D5D /* UITableViewCell+Category.m in Sources */,
-				2BC102931DCB4EBB00EE2D5D /* SWCollectionView.m in Sources */,
+				2BC102A81DCC3F2B00EE2D5D /* ViewController.m in Sources */,
 				2BC102641DCB280100EE2D5D /* FansViewController.m in Sources */,
 				2BC102671DCB280100EE2D5D /* OpinionView.m in Sources */,
 				2BC102611DCB280100EE2D5D /* AgreementViewController.m in Sources */,
 				2BC1027E1DCB28B300EE2D5D /* main.m in Sources */,
-				2BC102961DCB4EBB00EE2D5D /* ViewController.m in Sources */,
 				2BC102691DCB280100EE2D5D /* SecurityViewController.m in Sources */,
-				2BC102941DCB4EBB00EE2D5D /* SWCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +834,7 @@
 		};
 		2B5162131D88F199004D964A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DB73B258A30FE73A53B18DF /* Pods-Personal center.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Personal center/Info.plist";
@@ -753,6 +847,7 @@
 		};
 		2B5162141D88F199004D964A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D65760F52BBA0CDF4893723 /* Pods-Personal center.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Personal center/Info.plist";
